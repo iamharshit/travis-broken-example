@@ -1,6 +1,19 @@
-language: php
-php:
-  - 5.5
-  - 5.4
-  - hhvm
-script: phpunit Test.php
+language: python
+sudo: false
+
+# specify versions
+python:
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+
+# install dependencies 
+install: 
+  - "pip install -r requirements.txt"
+
+# run tests
+script: 
+  - pytest
+
+# check build at https://travis-ci.org/repositories
